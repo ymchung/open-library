@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookDetails Component Component should render correctly 1`] = `
+<div
+  class="book-details row"
+>
+  <div
+    class="loading"
+  >
+    <div
+      class="spinner-border"
+      role="status"
+    >
+      <span
+        class="visually-hidden"
+      >
+        Cargando...
+      </span>
+    </div>
+  </div>
+</div>
+`;

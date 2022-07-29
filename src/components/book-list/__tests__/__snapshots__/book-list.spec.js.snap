@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookList Component Component should render correctly 1`] = `
+<div
+  class="book-list row"
+>
+  <div
+    class="loading"
+  >
+    <div
+      class="spinner-border"
+      role="status"
+    >
+      <span
+        class="visually-hidden"
+      >
+        Cargando...
+      </span>
+    </div>
+  </div>
+  <div
+    class="book-card card"
+  >
+    <div
+      class="card-body"
+    >
+      <a
+        class="book-card__link"
+        data-testid="book-card__link"
+        href="/#"
+      >
+        <h3
+          class="book-card__title"
+        >
+          Harry Potter
+        </h3>
+        <p
+          class="book-card__subtitle"
+        >
+          de 
+          J. K. Rowling
+        </p>
+        <p
+          class="book-card__text"
+        >
+          Publicado por primera vez en 
+          1999
+        </p>
+      </a>
+    </div>
+  </div>
+  <div
+    class="book-card card"
+  >
+    <div
+      class="card-body"
+    >
+      <a
+        class="book-card__link"
+        data-testid="book-card__link"
+        href="/#"
+      >
+        <h3
+          class="book-card__title"
+        >
+          Harry Potter 2
+        </h3>
+        <p
+          class="book-card__subtitle"
+        >
+          de 
+          J. K. Rowling
+        </p>
+        <p
+          class="book-card__text"
+        >
+          Publicado por primera vez en 
+          2000
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+`;

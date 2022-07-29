@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
+import appStore from './store';
 
-function App() {
+import SearchContainer from './containers/search';
+import BooksContainer from './containers/books';
+import BookDetailsContainer from './containers/bookDetails';
+import HeaderLogo from './components/HeaderLogo';
+import AboutApp from './components/About';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={appStore}>
+      <div className="App">
+        <header className="App-header container">
+            <div className="row py-4">
+              <div className="col">
+                  <HeaderLogo />
+              </div>
+              <div className="col-sm-12 col-md-6">
+                <SearchContainer />
+              </div>
+            </div>
+        </header>
+        <main className="container py-4">
+          <Routes>
+            <Route path="/" element={<AboutApp />}/>
+            <Route path="books" element={<BooksContainer />}/>
+            <Route path="book/:bookId" element={<BookDetailsContainer />}/>
+            <Route path ="*" element={<div>Parece que esta página no existe</div>} />
+          </Routes>
+        </main>
+      </div>
+    </Provider>
   );
 }
 

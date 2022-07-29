@@ -1,0 +1,40 @@
+.book-details {
+    min-height: calc(100vh - 158px);
+
+    &__image {
+        width: 100%;
+    }
+
+    &__no-image {
+        font-size: 14px;
+        background-color: #ededed;
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 34px;
+    }
+
+    &__author {
+        font-size: 18px;
+        color: $open-library-medium-gray;
+        margin-bottom: 8px;
+    }
+
+    &__publish-year {
+        font-size: 12px;
+        color: $open-library-medium-gray;
+    }
+
+    &__info-container {
+        &-title {
+            font-size: 20px;
+        }
+        &-text {
+            font-size: 14px;
+        }
+    }
+}

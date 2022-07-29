@@ -1,0 +1,21 @@
+$breakpoint-mobile: 425px;
+$breakpoint-tablet: 768px;
+
+$open-library-blue: #518abe;
+$open-library-medium-gray: #666;
+
+@import 'bootstrap/dist/css/bootstrap.css';
+@import './components/loading/loading.scss';
+@import './components/pagination/pagination.scss';
+@import './components/search/search.scss';
+@import './components//book-card/book-card.scss';
+@import './components/book-list/book-list.scss';
+@import './components/book-details/book-details.scss';
+
+.App {
+  min-height: calc(100vh - 158px);
+
+  &-header {
+    border-bottom: 1px solid #dee2e6;
+  }
+}

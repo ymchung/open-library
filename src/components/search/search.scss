@@ -1,0 +1,12 @@
+.search {
+    &__button {
+        background-color: $open-library-blue;
+        color: #fff;
+    } 
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .search {
+        margin-top: 15px;
+    }
+}
