@@ -34,8 +34,7 @@ const Books = ({ books, searchText, isLoading, fetchBooks }) => {
 
     const handleOnBook = (e, k) => {
         e.preventDefault();
-        const bookKey = k.replace(new RegExp('.*' + '/works/'), '');
-        navigate(`/book/${bookKey}`);
+        navigate(`/book/${k}`);
     };
 
     return (
@@ -47,7 +46,7 @@ const Books = ({ books, searchText, isLoading, fetchBooks }) => {
                     book={book.key}
                     title={book.title}
                     authorName={book.authorName}
-                    year={book.first_publish_year}
+                    year={book.firstPublishYear}
                     handleOnBook={handleOnBook}
                 />)}
             {!isLoading && books && books.booksNumFound === 0 && <p>Lo sentimos, no encontramos resultados</p>}
@@ -61,7 +60,7 @@ Books.propTypes = {
         docs: arrayOf(shape({
             key: string,
             title: string,
-            first_publish_year: number,
+            firstPublishYear: number,
             authorName: string,
         })),
         currentPage: number,

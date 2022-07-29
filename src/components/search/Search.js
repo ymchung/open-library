@@ -41,8 +41,15 @@ const Search = ({ fetchBooks, searchText }) => {
     return (
         <form className={namespace}>
             <div className={`${namespace}__container input-group`}>
-                <input type="text" className={classNames(`${namespace}__input`, 'form-control', {'is-invalid': !isValidInput})} placeholder="Buscar libro" aria-label="" value={inputValue} onChange={onInputChange} />
-                <button type="submit" className={`${namespace}__button btn`} onClick={handleOnSubmit}>
+                <input
+                    type="text"
+                    className={classNames(`${namespace}__input`, 'form-control', {'is-invalid': !isValidInput})}
+                    placeholder="Buscar libro"
+                    aria-label="Buscador"
+                    value={inputValue}
+                    onChange={onInputChange}
+                />
+                <button type="submit" className={`${namespace}__button btn`} onClick={handleOnSubmit} data-testid={`${namespace}__button`}>
                     <span>BUSCAR</span>
                 </button>
                 {!isValidInput && <div className="invalid-feedback">Ingrese más de 3 caracteres</div>}

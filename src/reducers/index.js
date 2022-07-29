@@ -1,4 +1,4 @@
-import { IS_FETCHING, SET_BOOKS, SET_SEARCH_TEXT, SET_BOOK_DETAILS, SET_SELECTED_BOOK } from '../actions';
+import { IS_FETCHING, SET_BOOKS, SET_SEARCH_TEXT, SET_BOOK_DETAILS } from '../actions';
 
 const appReducer = (state, action) => {
     switch (action.type) {
@@ -28,14 +28,6 @@ const appReducer = (state, action) => {
                 isLoading: false,
                 books: null,
                 book: action.payload,
-            };
-        case SET_SELECTED_BOOK:
-            return {
-                ...state,
-                book: {
-                    ...state.book,
-                    selectedBook: action.payload.bookKey
-                },
             };
         default:
             return state;

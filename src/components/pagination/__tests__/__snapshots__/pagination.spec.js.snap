@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination Component Component should render correctly 1`] = `
+<nav
+  aria-label="Paginacion de libros encontrados"
+  class="paginator"
+>
+  <ul
+    class="pagination"
+  >
+    <li
+      class="page-item"
+    >
+      <a
+        class="page-link active"
+        data-testid="paginator__link-1"
+        href="/#"
+      >
+        1
+      </a>
+    </li>
+    <li
+      class="page-item"
+    >
+      <a
+        class="page-link"
+        data-testid="paginator__link-2"
+        href="/#"
+      >
+        2
+      </a>
+    </li>
+    <li
+      class="page-item"
+    >
+      <a
+        class="page-link"
+        data-testid="paginator__link-3"
+        href="/#"
+      >
+        3
+      </a>
+    </li>
+    <li
+      class="page-item"
+    >
+      <a
+        class="page-link"
+        data-testid="paginator__link-4"
+        href="/#"
+      >
+        4
+      </a>
+    </li>
+    <li
+      class="page-item"
+    >
+      <a
+        aria-label="Siguiente"
+        class="page-link"
+        href="/#"
+      >
+        <span
+          aria-hidden="true"
+        >
+          »
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

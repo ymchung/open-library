@@ -38,13 +38,11 @@ exports[`BookList Component Component should render correctly 1`] = `
           class="book-card__subtitle"
         >
           de 
-          J. K. Rowling
         </p>
         <p
           class="book-card__text"
         >
           Publicado por primera vez en 
-          1999
         </p>
       </a>
     </div>
@@ -69,13 +67,11 @@ exports[`BookList Component Component should render correctly 1`] = `
           class="book-card__subtitle"
         >
           de 
-          J. K. Rowling
         </p>
         <p
           class="book-card__text"
         >
           Publicado por primera vez en 
-          2000
         </p>
       </a>
     </div>

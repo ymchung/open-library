@@ -25,7 +25,7 @@ const getPaginatorPages = (pages, currentPage) => {
     return paginatorPages;
 };
 
-const Pagination = ({ currentPage, total, pageLimit, onPageChange}) => {
+const Pagination = ({ currentPage, total, pageLimit, onPageChange }) => {
 
     if (total/pageLimit <= 1) return null;
 
@@ -52,7 +52,14 @@ const Pagination = ({ currentPage, total, pageLimit, onPageChange}) => {
                     return (
                         Number.isInteger(n) ? (
                             <li className="page-item" key={n}>
-                                <a className={classNames('page-link', {'active' : isCurrentPage})} href="/#" onClick={e => handleOnClickPage(e, n)}>{n}</a>
+                                <a
+                                    className={classNames('page-link', {'active' : isCurrentPage})}
+                                    href="/#"
+                                    onClick={e => handleOnClickPage(e, n)}
+                                    data-testid={`${namespace}__link-${n}`}
+                                    >
+                                        {n}
+                                </a>
                             </li>
                         ) : (
                             <li className="page-item" key={n}>

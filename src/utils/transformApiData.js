@@ -5,12 +5,24 @@ const getAuthorName = authorName => {
     return authorName;
 }
 
-const getAuthorKey = authorKey => authorKey && authorKey[0].replace(new RegExp('.*' + '/works/'), '');
+const getAuthorKey = authorKey => {
+    const regex = new RegExp('.*works/');
+    if (Array.isArray(authorKey)) {
+        return authorKey[0].replace(regex, '');
+    }
+    
+    return authorKey.replace(regex, '');
+} 
 
 const getImageUrl = coverId => `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
 
 const transformBooks = data => ({
-    docs: data.docs.map(d => ({ ...d, authorName: getAuthorName(d.author_name)})),
+    docs: data.docs.map(d => ({
+        key: getAuthorKey(d.key),
+        title: d.title,
+        authorName: getAuthorName(d.author_name),
+        firstPublishYear: d.first_publish_year,
+    })),
     booksNumFound: data.numFound,
 });
 

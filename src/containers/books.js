@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Books from '../components/book-list';
 import APIService from '../services/api';
 
-import { IS_FETCHING, SET_BOOKS, SET_SEARCH_TEXT, SET_SELECTED_BOOK } from '../actions';
+import { IS_FETCHING, SET_BOOKS, SET_SEARCH_TEXT } from '../actions';
 
 const mapStateToProps = (state, ownProps) => ({ ...state, ...ownProps });
 
@@ -21,7 +21,6 @@ const mapDispatchToProps = (dispatch) => ({
             }))
             .catch(e => console.error(e));
     },
-    setSelectedBook: bookKey => dispatch({ type: SET_SELECTED_BOOK, payload: { bookKey }}),
 });
 
 export default connect(

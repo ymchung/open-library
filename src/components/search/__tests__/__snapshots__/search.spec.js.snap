@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component Component should render correctly 1`] = `
+<form
+  class="search"
+>
+  <div
+    class="search__container input-group"
+  >
+    <input
+      aria-label="Buscador"
+      class="search__input form-control"
+      placeholder="Buscar libro"
+      type="text"
+      value="abcd"
+    />
+    <button
+      class="search__button btn"
+      data-testid="search__button"
+      type="submit"
+    >
+      <span>
+        BUSCAR
+      </span>
+    </button>
+  </div>
+</form>
+`;
