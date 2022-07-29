@@ -46,7 +46,7 @@ const Books = ({ books, searchText, isLoading, fetchBooks }) => {
                     key={book.key}
                     book={book.key}
                     title={book.title}
-                    authorName={book.author_name}
+                    authorName={book.authorName}
                     year={book.first_publish_year}
                     handleOnBook={handleOnBook}
                 />)}
@@ -62,7 +62,7 @@ Books.propTypes = {
             key: string,
             title: string,
             first_publish_year: number,
-            author_name: string,
+            authorName: string,
         })),
         currentPage: number,
         booksNumFound: number,

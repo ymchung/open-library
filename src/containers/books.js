@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
                 payload: { 
                     currentPage: page,
                     docs: response.docs,
-                    booksNumFound: response.numFound
+                    booksNumFound: response.booksNumFound
                 }
             }))
             .catch(e => console.error(e));

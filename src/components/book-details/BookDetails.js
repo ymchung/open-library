@@ -20,7 +20,7 @@ const Book = ({ book, isLoading, fetchSelectedBook }) => {
             {!isLoading && book && (
                 <>
                     <div className={classNames(`${namespace}__image-container`, 'col-md-3')}>
-                        {book.imageUrl ? (<img src={book.imageUrl} className={`${namespace}__image`} alt="Portada del libro"/>) :
+                        {book.imageUrl ? (<img src={book.imageUrl} className={`${namespace}__image`} loading="lazy" alt="Portada del libro"/>) :
                         (<div className={`${namespace}__no-image`}>IMAGEN NO DISPONIBLE</div>)}
                     </div>
                     <div className={classNames(`${namespace}__description-container`, 'col-md-9')}>

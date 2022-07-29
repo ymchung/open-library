@@ -13,7 +13,10 @@ const mapDispatchToProps = (dispatch) => ({
         APIService.getBooks(value, page)
             .then(response => dispatch({
                 type: SET_BOOKS,
-                payload: { currentPage: page, books: response.docs, booksNumFound: response.numFound,
+                payload: {
+                    currentPage: page,
+                    booksNumFound: response.booksNumFound,
+                    docs: response.docs,
             }}))
             .catch(e => console.error(e));
     },

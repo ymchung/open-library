@@ -1,4 +1,4 @@
-import { transformBookDetails } from '../utils/transformApiData';
+import { transformBookDetails, transformBooks } from '../utils/transformApiData';
 
 const baseUrl = 'https://openlibrary.org';
 
@@ -6,7 +6,8 @@ class Service {
     static getBooks(value, page = 1) {
         const queryString = value.trim().replace(/ /g,'+');
         return fetch(`${baseUrl}/search.json?q=${queryString}&page=${page}`)
-            .then(response => response.json());
+            .then(response => response.json())
+            .then(res => transformBooks(res));
     }
 
     static getBookDetails(bookKey) {

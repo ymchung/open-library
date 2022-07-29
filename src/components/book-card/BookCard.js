@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, func, oneOfType, arrayOf } from 'prop-types';
+import { string, number, func } from 'prop-types';
 
 const namespace = 'book-card';
 
@@ -16,10 +16,10 @@ const BookCard = ({ book, title, authorName, year, handleOnBook }) => (
 );
 
 BookCard.propTypes = {
-    book: string.isRequired,
-    title: string.isRequired,
-    authorName: oneOfType([string, arrayOf(string)]),
-    year: number.isRequired,
+    book: string,
+    title: string,
+    authorName: string,
+    year: number,
     handleOnBook: func.isRequired,
 };
 
